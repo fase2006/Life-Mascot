@@ -1,0 +1,103 @@
+import React, { useState } from 'react';
+
+const DonationScreen = ({ onBack }) => {
+  const [selectedVet, setSelectedVet] = useState('');
+  const [customVet, setCustomVet] = useState('');
+  const [donationAmount, setDonationAmount] = useState('');
+  const [donationLog, setDonationLog] = useState([]);
+
+  const vetOptions = ['Veterinaria San Martín', 'PetCare Piura', 'Veterinaria Santa Rosa', 'Otros'];
+  const quickAmounts = [1, 5, 10, 15, 50, 100];
+
+  const handleDonate = () => {
+    const vetName = selectedVet === 'Otros' ? customVet.trim() : selectedVet;
+    if (!vetName || !donationAmount) return;
+
+    const newLog = {
+      vet: vetName,
+      amount: parseFloat(donationAmount).toFixed(2),
+      date: new Date().toLocaleString()
+    };
+    setDonationLog([newLog, ...donationLog]);
+    setDonationAmount('');
+    setCustomVet('');
+    setSelectedVet('');
+  };
+
+  return (
+    <div className="p-6 max-w-xl mx-auto">
+      <button
+        onClick={onBack}
+        className="mb-4 text-blue-600 hover:underline"
+      >
+        ← Volver
+      </button>
+
+      <h2 className="text-2xl font-bold mb-4 text-center">Donar a Veterinarias</h2>
+
+      <label className="block mb-2 font-medium">Selecciona una veterinaria:</label>
+      <select
+        className="w-full border border-gray-300 rounded px-3 py-2 mb-4"
+        value={selectedVet}
+        onChange={(e) => setSelectedVet(e.target.value)}
+      >
+        <option value="">-- Seleccionar --</option>
+        {vetOptions.map((vet, idx) => (
+          <option key={idx} value={vet}>{vet}</option>
+        ))}
+      </select>
+
+      {selectedVet === 'Otros' && (
+        <input
+          type="text"
+          placeholder="Nombre de la veterinaria"
+          value={customVet}
+          onChange={(e) => setCustomVet(e.target.value)}
+          className="w-full border border-gray-300 rounded px-3 py-2 mb-4"
+        />
+      )}
+
+      <label className="block mb-2 font-medium">Selecciona o escribe un monto (S/):</label>
+      <div className="flex flex-wrap gap-2 mb-4">
+        {quickAmounts.map((amount) => (
+          <button
+            key={amount}
+            onClick={() => setDonationAmount(amount)}
+            className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600"
+          >
+            S/ {amount}
+          </button>
+        ))}
+      </div>
+      <input
+        type="number"
+        placeholder="Otro monto"
+        value={donationAmount}
+        onChange={(e) => setDonationAmount(e.target.value)}
+        className="w-full border border-gray-300 rounded px-3 py-2 mb-4"
+      />
+
+      <button
+        onClick={handleDonate}
+        className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 font-semibold"
+      >
+        Donar
+      </button>
+
+      <h3 className="text-xl font-bold mt-8 mb-4">Registro de Donaciones</h3>
+      {donationLog.length === 0 ? (
+        <p className="text-gray-500">Aún no hay donaciones.</p>
+      ) : (
+        <ul className="space-y-2">
+          {donationLog.map((entry, index) => (
+            <li key={index} className="bg-gray-100 p-3 rounded shadow-sm">
+              <span className="font-medium">{entry.vet}</span> recibió <span className="text-green-700 font-semibold">S/ {entry.amount}</span> el {entry.date}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+};
+
+export default DonationScreen;
