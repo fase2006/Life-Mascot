@@ -59,13 +59,14 @@ const MoreScreen = ({ onBack, onNavigate, onSupportChat }) => {
         </button>
 
         {/* Nuevo botón de donación */}
-        <button 
-  onClick={() => onNavigate('donation')}
-  className="w-full bg-pink-500 text-white py-4 rounded-xl shadow-md flex items-center justify-center space-x-3 hover:bg-pink-600 transition-colors"
->
-  <span className="text-2xl">❤️</span>
-  <span className="font-medium">Donar</span>
-</button>
+        <a 
+        href="https://www.paypal.com/donate" // Reemplázalo con tu enlace real
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="block w-full bg-pink-500 text-white text-center py-3 rounded-lg font-medium hover:bg-pink-600 transition-colors mt-6"
+      >
+        💖 Donar
+      </a>
 
       </div>
 
