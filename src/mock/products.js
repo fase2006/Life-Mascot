@@ -4,7 +4,7 @@ const products = [
     category: "ropa",
     name: "Chaqueta Impermeable para Perro",
     price: 75.00,
-    image: "https://acortar.link/j0Visn",
+    image: "https://http2.mlstatic.com/D_Q_NP_667119-MPE69773364256_062023-O.webp",
     premium: false
   },
   {
@@ -20,7 +20,7 @@ const products = [
     category: "cosmeticos",
     name: "Shampoo Hipoalergénico",
     price: 45.00,
-    image: "https://4tsix0yujj.ufs.sh/f/2vMRHqOYUHc0jkvuIdzprvgIPmTtsSNY2ecybAh5LloqCaQw",
+    image: "https://mundoverde.com.pe/wp-content/uploads/2021/05/PhotoRoom-20211122_132803-821x1024.png",
     premium: false
   },
   {
@@ -28,7 +28,7 @@ const products = [
     category: "cosmeticos",
     name: "Cepillo Deslanador",
     price: 60.00,
-    image: "https://4tsix0yujj.ufs.sh/f/2vMRHqOYUHc07nm1BT9ulj9cdOX5xw8FV0A6Wpo2KaRHmChz",
+    image: "https://http2.mlstatic.com/D_NQ_NP_745334-MLU78051638286_082024-O.webp",
     premium: false
   },
   {
@@ -36,7 +36,7 @@ const products = [
     category: "comida",
     name: "Alimento Seco Premium (1kg)",
     price: 90.00,
-    image: "https://acortar.link/9ZanZ4",
+    image: "https://aculi.pe/wp-content/uploads/2021/02/acu-li-pet-store-shop-alimento-comida-seco-perro-adulto-premium-mio-cane.png",
     premium: false
   },
   {
@@ -44,7 +44,7 @@ const products = [
     category: "comida",
     name: "Snacks Dentales (pack)",
     price: 25.00,
-    image: "https://4tsix0yujj.ufs.sh/f/2vMRHqOYUHc03mU4e6ku0HlIPwSxAEOXk6nTjd9beaNftrh5",
+    image: "https://guaw.com/60453-thickbox_default/pack-dentalife-de-snacks-dentales-para-gatos-de-pollo.jpg",
     premium: false
   },
   {
@@ -52,7 +52,7 @@ const products = [
     category: "farmacia",
     name: "Antipulgas y Garrapatas",
     price: 120.00,
-    image: "https://acortar.link/M0LczN",
+    image: "https://promart.vteximg.com.br/arquivos/ids/7039437-1000-1000/image-ef57421b23fd411aa4a7678a9922b0d6.jpg?v=638201462480000000",
     premium: false
   },
   {
@@ -60,7 +60,7 @@ const products = [
     category: "farmacia",
     name: "Suplemento Vitamínico",
     price: 80.00,
-    image: "https://4tsix0yujj.ufs.sh/f/2vMRHqOYUHc040VYYj",
+    image: "https://mascotify.pe/wp-content/uploads/2021/06/Vetnil-Hemolitan-Pet-Suplemento-para-perros-y-gatos.png",
     premium: false
   },
   {
@@ -68,7 +68,7 @@ const products = [
     category: "premium",
     name: "Cama Ortopédica Deluxe",
     price: 250.00,
-    image: "https://acortar.link/axWy51",
+    image: "https://oechsle.vteximg.com.br/arquivos/ids/16122574/image-db60b3155c534c0b93f198cdc5e68bc2.jpg?v=638296992221330000",
     premium: true
   },
   {
