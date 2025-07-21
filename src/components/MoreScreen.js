@@ -57,6 +57,15 @@ const MoreScreen = ({ onBack, onNavigate, onSupportChat }) => {
           <span className="text-2xl">✨</span>
           <span className="font-medium">Mejorar a Premium</span>
         </button>
+
+        {/* Nuevo botón de donación */}
+        <button 
+          onClick={() => window.open("https://www.paypal.com/donate", "_blank")}
+          className="w-full bg-pink-500 text-white py-4 rounded-xl shadow-md flex items-center justify-center space-x-3 hover:bg-pink-600 transition-colors"
+        >
+          <span className="text-2xl">❤️</span>
+          <span className="font-medium">Donar</span>
+        </button>
       </div>
 
       <div className="mt-8 flex justify-around">
@@ -67,9 +76,10 @@ const MoreScreen = ({ onBack, onNavigate, onSupportChat }) => {
           <img src="https://acortar.link/n2gYgu" alt="Facebook" className="w-6 h-6" />
         </a>
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 transition-colors">
-          <img src="https://acortar.link/UuDePQ" alt="Instagram" className="w-6 h-6" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHh9ViF0gZEibWmkpgu83gP87hefJ1j2tDZA&s" alt="Instagram" className="w-6 h-6" />
         </a>
       </div>
+
       <button 
         onClick={onSupportChat}
         className="w-full bg-blue-500 text-white py-3 rounded-lg font-medium hover:bg-blue-600 transition-colors mt-6"
