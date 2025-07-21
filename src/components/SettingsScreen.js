@@ -37,7 +37,12 @@ const SettingsScreen = ({ onBack, onLogout, onDeleteAccount, onChangePassword })
           <h3 className="text-lg font-semibold mb-2">Creadores de la Aplicación</h3>
           <ul className="list-disc list-inside text-gray-700 text-sm">
             {creators.map((creator, index) => (
-              <li key={index}>{creator}</li>
+              <li key={index}>
+                {creator}
+                {creator.includes("Seminario Mejia, Fabrizio Eduardo") && (
+                  <strong className="ml-2">– Desarrollador de la app</strong>
+                )}
+              </li>
             ))}
           </ul>
         </div>
