@@ -3,13 +3,11 @@ import BackButton from './BackButton';
 
 const SettingsScreen = ({ onBack, onLogout, onDeleteAccount, onChangePassword }) => {
   const creators = [
-    "Asmad Santos, José Arcadio",
-    "Boulangger Atoche Luis Samuel",
-    "Castillo Alburqueque Fabian",
-    "Saavedra Carrillo Jessie Sam",
+    "Aguilar Pacherre, Arlin Moises",
+    "Barrenechea Castañeda Dayron Antony ",
+    "Castillo Campos, Keyner",
+    "Garces Vasquez, Beberly Asli",
     "Seminario Mejia, Fabrizio Eduardo",
-    "Laban Saavedra Yuri Magdalena",
-    "Guerrero Gonzales Lenin Stalin"
   ];
 
   return (
